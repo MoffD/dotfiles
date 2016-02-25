@@ -7,7 +7,7 @@
 function pfind(){ ps $(pgrep $@);}
 function getdesktopwindow(){ xwininfo -name xfdesktop|grep -o "id: 0x.*.\""|sed -e "s/id: //" -e 's/".*."//g';}
 
-export WIILOAD=tcp:$(arp -na|grep -e '00:23:31:a6:2f:6b'|grep -Eo "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
+export WIILOAD=tcp:$(arp -na|grep -e '00:23:31:a6:2f:6b'|grep -Eo "([0-9]{1,3}[\.]){3}[0-9]{1,3}")#Mmmm wii mac address
 export DEVKITPRO=/home/moffd/devkitPro
 export DEVKITPPC=${DEVKITPRO}/devkitPPC
 alias ls='ls --color=auto'
